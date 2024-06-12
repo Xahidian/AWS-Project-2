@@ -1,0 +1,29 @@
+https://openbenchmarking.org/user/amitsaif
+
+c7a.medium
+t4g.nano
+m6g.medium
+
+ssh -i "zahid1.pem" ec2-18-233-147-154.compute-1.amazonaws.com
+sudo apt-get update
+sudo apt-get install php
+sudo apt-get install php-xml php8.1-xml
+
+sudo apt-get install unzip
+
+wget http://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_10.2.2_all.deb
+
+sudo dpkg -i phoronix-test-suite_10.2.2_all.deb
+
+phoronix-test-suite --version
+
+phoronix-test-suite install pts/openssl pts/stream pts/encode-mp3 pts/apache pts/network-loopback pts/john-the-ripper
+
+phoronix-test-suite openbenchmarking-login
+
+phoronix-test-suite benchmark pts/openssl pts/stream pts/encode-mp3 pts/apache pts/network-loopback pts/john-the-ripper
+
+
+T2 : https://openbenchmarking.org/result/2401317-ACER-CC24ASS18
+c7 :  https://openbenchmarking.org/result/2401310-ACER-CC24ASS75
+m1 : https://openbenchmarking.org/result/2401318-ACER-M1SMALL27
